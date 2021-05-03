@@ -8,7 +8,7 @@ const FaqSection = () => {
   return $(
     Faq,
     { className: 'faq' },
-    $('h2', null, 'Any Questions', $('span', null, ' Faq')),
+    $('h2', null, 'Any Questions', $('span', null, ' F.A.Q')),
     dataQA.map((qAnswer) =>
       $(QAComponent, {
         question: qAnswer.question,
@@ -71,12 +71,13 @@ const QAComponent = ({ question, paragraph1, paragraph2 }) => {
 const dataQA = [
   {
     question: 'How do I start ?',
-    paragraph1: 'First you need to have some kind of developed idea',
+    paragraph1: 'Firstly you need to have some kind of developed idea',
     paragraph2: 'Something that we could start working from.',
   },
   {
     question: 'How long will it take ?',
-    paragraph1: 'It all depends on the project type and services were offering',
+    paragraph1:
+      'It all depends on the type of project and services we’re offering',
     paragraph2:
       'Simple project will take 2 weeks to a month while bigger project could take up to 6 months.',
   },

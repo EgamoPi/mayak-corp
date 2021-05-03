@@ -2,9 +2,24 @@ import { createElement as $ } from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const ContactForm = () => {
-  const { register, errors, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+
+  const toastifySuccess = () => {
+    toast('Contact Form sent!', {
+      position: 'bottom-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      className: 'submit-feedback success',
+      toastId: 'notifyToast',
+    });
+  };
 
   const onSubmit = async (data) => {
     try {
@@ -24,6 +39,7 @@ const ContactForm = () => {
         process.env.REACT_APP_USER_ID
       );
       reset();
+      toastifySuccess();
     } catch (error) {
       console.log(error);
     }
@@ -229,7 +245,8 @@ const ContactForm = () => {
             )
           )
         )
-      )
+      ),
+      $(ToastContainer)
     )
   );
 };

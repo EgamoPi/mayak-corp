@@ -29,7 +29,7 @@ const OurProjects = () => {
     {
       serviceName: 'IT-Product Development',
       image: dev,
-      url: '/services/dev',
+      url: '/services/it-development',
       reference: null,
       variants: '',
       animate: '',
@@ -38,7 +38,7 @@ const OurProjects = () => {
     {
       serviceName: 'Artistic Project Develoment',
       image: creativity,
-      url: '/services/art',
+      url: '/services/art-development',
       reference: element,
       variants: fade,
       animate: controls,
@@ -47,7 +47,7 @@ const OurProjects = () => {
     {
       serviceName: 'Digital Marketing',
       image: dmarketing1,
-      url: '/services/personal',
+      url: '/services/digital-marketing',
       reference: element2,
       variants: fade,
       animate: controls2,
@@ -73,9 +73,12 @@ const OurProjects = () => {
           'We offer different services : Web Development, Digital Marketing & Design',
       }),
       $('meta', {
-        name: 'keywords',
-        content:
-          'Web, mobile, application, branding, marketing, seo, cybersecurity',
+        name: 'robots',
+        content: 'index, follow',
+      }),
+      $('meta', {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0',
       })
     ),
     $(

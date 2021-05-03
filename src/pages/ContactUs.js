@@ -30,8 +30,12 @@ const ContactUS = () => {
         content: 'Contact Us',
       }),
       $('meta', {
-        name: 'keywords',
-        content: 'Contact, Location, Partnership',
+        name: 'robots',
+        content: 'index, follow',
+      }),
+      $('meta', {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0',
       })
     ),
     $(

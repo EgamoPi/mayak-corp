@@ -27,9 +27,12 @@ const AboutUs = () => {
         content: 'Internation Web Development & Design Company',
       }),
       $('meta', {
-        name: 'keywords',
-        content:
-          'Web, development, ui, ux, design, company, affordable, efficiency, quality',
+        name: 'robots',
+        content: 'index, follow',
+      }),
+      $('meta', {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0',
       })
     ),
     $(AboutSection),

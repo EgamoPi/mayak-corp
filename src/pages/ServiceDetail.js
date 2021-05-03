@@ -2,6 +2,8 @@ import { createElement as $, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { DataServices } from '../servicesState';
+import { Helmet } from 'react-helmet';
+
 //Animations
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
@@ -9,10 +11,11 @@ import { pageAnimation } from '../animation';
 const ServiceDetail = () => {
   //States
   const history = useHistory();
-  const [services, setServices] = useState(DataServices);
+  const [services] = useState(DataServices);
   const [service, setService] = useState(null);
 
   const url = history.location.pathname;
+  const serviceTitle = url.split('/')[2].toUpperCase().split('-').join(' ');
   //useEffect
   useEffect(() => {
     const currentService = services.filter(
@@ -33,6 +36,23 @@ const ServiceDetail = () => {
         animate: 'show',
         exit: 'exit',
       },
+      $(
+        Helmet,
+        null,
+        $('title', null, `Services | ${serviceTitle} `),
+        $('meta', {
+          name: 'description',
+          content: `${serviceTitle}`,
+        }),
+        $('meta', {
+          name: 'robots',
+          content: 'index, follow',
+        }),
+        $('meta', {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1.0',
+        })
+      ),
       $(
         Headline,
         null,

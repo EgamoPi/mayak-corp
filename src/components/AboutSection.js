@@ -1,4 +1,5 @@
 import { createElement as $ } from 'react';
+import { Link } from 'react-router-dom';
 import homeImg from '../img/amandine.jpeg';
 //Reusable Styled Components
 import { Container, SubContainer, Image, Hide } from '../styles';
@@ -49,7 +50,11 @@ const AboutSection = () => {
         { variants: fade },
         'Contact us for any project development!'
       ),
-      $(motion.button, { variants: fade }, `Let's Work !`)
+      $(
+        Link,
+        { to: '/contact' },
+        $(motion.button, { variants: fade }, `Let's Work !`)
+      )
     ),
     $(Image, null, $(motion.img, { src: homeImg, variants: photoAnimation })),
     $(Wave)

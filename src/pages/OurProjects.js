@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 //Images
-import dev from '../img/development.jpg';
-import creativity from '../img/creativity.jpg';
-import dmarketing1 from '../img/digital-marketing-1.jpeg';
+import dev from '../img/online_transactions.svg';
+import creativity from '../img/conceptual_idea.svg';
+import dmarketing1 from '../img/social_thinking.svg';
 //Animations
 import { motion } from 'framer-motion';
 import {
@@ -128,7 +128,11 @@ const ServiceComp = ({
       $(
         Hide,
         null,
-        $(motion.img, { src: serviceImage, variants: photoAnimation })
+        $(motion.img, {
+          src: serviceImage,
+          variants: photoAnimation,
+          style: { objectFit: 'contain' },
+        })
       )
     )
   );

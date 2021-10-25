@@ -1,8 +1,10 @@
 //Images
-import dev from './img/development.jpg';
-import creativity from './img/creativity.jpg';
-import dmarketing from './img/digital-marketing.jpeg';
-import dmarketing1 from './img/digital-marketing-1.jpeg';
+import dev from './img/online_transactions.svg';
+import dev1 from './img/development.jpg';
+import creativity from './img/conceptual_idea.svg';
+import creativity1 from './img/creativity.jpg';
+import dmarketing from './img/conceptual_idea.svg';
+import dmarketing1 from './img/conceptual_idea.svg';
 
 //Services Data
 export const DataServices = () => {
@@ -10,7 +12,7 @@ export const DataServices = () => {
     {
       title: 'IT-Product development',
       mainImg: dev,
-      secondaryImg: dev,
+      secondaryImg: dev1,
       url: '/services/it-development',
       descriptions: [
         {
@@ -32,7 +34,7 @@ export const DataServices = () => {
       title: 'Artistic Project Development',
       mainImg: creativity,
       url: '/services/art-development',
-      secondaryImg: creativity,
+      secondaryImg: creativity1,
       descriptions: [
         {
           title: 'Digital art',

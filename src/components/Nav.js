@@ -9,7 +9,7 @@ const Nav = () => {
   return $(
     StyledNav,
     null,
-    $('h1', null, $(Link, { to: '/', id: 'Logo' }, 'Mayak Corp.')),
+    $('h1', null, $(Link, { to: '/', id: 'Logo' }, 'Mayak Tech.')),
     $(
       'ul',
       null,

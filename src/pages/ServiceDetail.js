@@ -57,7 +57,11 @@ const ServiceDetail = () => {
         Headline,
         null,
         $('h2', null, item.title),
-        $('img', { src: item.mainImg })
+        $('img', {
+          src: item.mainImg,
+          alt: 'service',
+          style: { objectFit: 'contain' },
+        })
       ),
       $(
         Descriptions,
@@ -73,7 +77,11 @@ const ServiceDetail = () => {
       $(
         ImageDisplay,
         null,
-        $('img', { src: item.secondaryImg, alt: 'service' })
+        $('img', {
+          src: item.secondaryImg,
+          alt: 'service',
+          style: { objectFit: 'contain' },
+        })
       )
     );
   }

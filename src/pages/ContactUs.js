@@ -121,14 +121,14 @@ const Hide = styled.div`
 `;
 
 const dataContact = [
-  {
+  /*   {
     title: 'Collaborators & Sponsors',
     paragraph1: 'The people behind the scene of your dreams.',
     paragraph2: '',
     contact: true,
     component: '',
     className: 'callaborators',
-  },
+  }, */
   {
     title: 'Contact',
     paragraph1: 'Business, Suggestions or even jokes, let us know !',
@@ -148,7 +148,7 @@ const dataContact = [
   {
     title: 'Be part of the team',
     paragraph1:
-      'Become a collaborator, a sponsor or just a simple fan, there is always place at the Mayak Family.',
+      "Become a collaborator, a sponsor or just a simple fan, there is always place at the Mayak Family. Send us a message and let's see how we can work together !",
     paragraph2: '',
     contact: true,
     component: '',
